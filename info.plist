@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>io.github.villim</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>5F7D0B99-2C6B-4E53-934A-8F40855E0C7F</key>
+		<array/>
+		<key>9F2AA4A0-FD81-4CEC-9573-277A9E34EAE0</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string>Villim</string>
+	<key>description</key>
+	<string>converttor for Celsius and Fahenheit</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Equals Convertor</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>c2f</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>please wait ...</string>
+				<key>script</key>
+				<string>import sys
+
+celsius = {query}
+fathenheit = int(celsius) * (9/5) + 32
+
+sys.stdout.write(
+'&lt;?xml version="1.0"?&gt; &lt;items&gt; &lt;item valid="yes"&gt;  &lt;title&gt; Fathenheit:  ' + str(fathenheit) +' ℉&lt;/title&gt; &lt;subtitle&gt; Celsius:  '+ str(celsius) + ' ℃&lt;/subtitle&gt; &lt;/item&gt; &lt;/items&gt;')
+</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>input the  celsius degree</string>
+				<key>title</key>
+				<string>Equals Convertor</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5F7D0B99-2C6B-4E53-934A-8F40855E0C7F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>32</integer>
+				<key>keyword</key>
+				<string>f2c</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Please wait ...</string>
+				<key>script</key>
+				<string>import sys
+
+fathenheit = {query}
+celsius = (int(fathenheit) - 32) / (9/5) 
+
+sys.stdout.write(
+'&lt;?xml version="1.0"?&gt; &lt;items&gt; &lt;item valid="yes"&gt;  &lt;title&gt; Celsius:  ' + str(celsius) +' ℃&lt;/title&gt; &lt;subtitle&gt; Fathenheit:  '+ str(fathenheit) + ' ℉&lt;/subtitle&gt; &lt;/item&gt; &lt;/items&gt;')
+</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>input the fathenheit degree</string>
+				<key>title</key>
+				<string>Equals Convertor</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>9F2AA4A0-FD81-4CEC-9573-277A9E34EAE0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>5F7D0B99-2C6B-4E53-934A-8F40855E0C7F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>110</integer>
+			<key>ypos</key>
+			<integer>110</integer>
+		</dict>
+		<key>9F2AA4A0-FD81-4CEC-9573-277A9E34EAE0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>110</integer>
+			<key>ypos</key>
+			<integer>280</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://villim.github.io</string>
+</dict>
+</plist>
